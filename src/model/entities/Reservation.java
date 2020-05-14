@@ -39,7 +39,7 @@ public class Reservation {
 	}
 
 	public long duration() {
-		long diff = checkOut.getTime() - checkOut.getTime(); // CONVERTENDO EM MILISSEGUNDOS PARA CALCULAR
+		long diff = checkOut.getTime() - checkIn.getTime(); // CONVERTENDO EM MILISSEGUNDOS PARA CALCULAR
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS); // CONVERTENDO MILISSEGUNDOS EM DIAS
 	}
 	
@@ -50,7 +50,7 @@ public class Reservation {
 	
 	@Override
 	public String toString() {
-		return "Room " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut) + ", " + duration() + "nights";
+		return "Room " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut) + ", " + duration() + " nights";
 	}
 	
 	
